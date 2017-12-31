@@ -10,4 +10,6 @@
 #
 
 class Zombie < ApplicationRecord
+  validates :name, presence: true
+  validates :graveyard, presence: true
 end
