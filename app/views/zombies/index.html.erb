@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Zombies</h1>
+      <table class="table">
+
+        <tr>
+          <th>Name</th>
+          <th>Graveyard</th>
+        </tr>
+        <%@zombies.each do |zombie|%>
+        <tr>
+          <th><%=zombie.name%></th>
+          <th><%=zombie.graveyard%></th>
+        </tr>
+        <%end%>
+
+      </table>
+    </div>
+  </div>
+</div>
