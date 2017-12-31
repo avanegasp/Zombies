@@ -3,19 +3,24 @@
     <div class="col-sm-12">
       <h1>Zombies</h1>
       <table class="table">
-
         <tr>
           <th>Name</th>
           <th>Graveyard</th>
+          <th>Edit</th>
+          <th>Delete</th>
         </tr>
         <%@zombies.each do |zombie|%>
         <tr>
-          <th><%=zombie.name%></th>
-          <th><%=zombie.graveyard%></th>
+          <td><%=zombie.name%></td>
+          <td><%=zombie.graveyard%></td>
+          <td>editar</td>
+          <td>borrar</td>
         </tr>
         <%end%>
-
       </table>
+      <div class="">
+        <%=link_to "Crear un nuevo zombie", new_zombie_path, class:"btn btn_primary btn-lg btn-block"%>
+      </div>
     </div>
   </div>
 </div>

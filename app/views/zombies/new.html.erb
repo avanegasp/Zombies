@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>New Zombie</h1>
+
+      <%=form_for @zombie do |f|%>
+        <div class="form-group">
+        <%=f.text_field :name, class:"form-control input-lg", placeholder:"Zombie's name"%>
+        </div>
+        <div class="form-group">
+          <%=f.text_field :graveyard, class:"form-control input-lg", placeholder:"Graveyard"%>
+        </div>
+        <div class="">
+          <%=f.submit class:"btn btn-primary btn-lg btn-block"%>
+        </div>
+      <%end%>
+    </div>
+  </div>
+</div>
