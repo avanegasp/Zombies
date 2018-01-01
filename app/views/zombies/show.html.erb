@@ -2,5 +2,10 @@
   <header class="zombie-header">
     <h1><%=@zombie.name%></h1>
     <p><%=@zombie.graveyard%></p>
+
+    <div class="actions">
+      <%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_zombie_path(@zombie)%>
+      <%=link_to "<span class='glyphicon glyphicon-trash'></span>".html_safe, @zombie, method: :delete, data: { confirm: "Are you sure to delete this zombie?"}%>
+    </div>
   </header>
 </div>

@@ -7,14 +7,15 @@
           <th>Name</th>
           <th>Graveyard</th>
           <th>Edit</th>
-          <th>Delete</th>
         </tr>
         <%@zombies.each do |zombie|%>
         <tr>
-          <td><%=zombie.name%></td>
+          <div class="">
+            <td><%=link_to zombie.name, zombie_path(zombie)%></td>
+
+          </div>
           <td><%=zombie.graveyard%></td>
-          <td>editar</td>
-          <td>borrar</td>
+          <td><%=link_to "Editar", edit_zombie_path(zombie)%></td>
         </tr>
         <%end%>
       </table>
