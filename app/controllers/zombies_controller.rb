@@ -1,4 +1,6 @@
 class ZombiesController < ApplicationController
+  before_action :authenticate_model! , only: [:new]
+
   def index
     @zombies = Zombie.all
   end

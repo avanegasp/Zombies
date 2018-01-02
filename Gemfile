@@ -34,6 +34,9 @@ gem 'jbuilder', '~> 2.5'
 #devise
 gem 'devise'
 
+#gravatar
+gem 'gravatar-ultimate'
+
 #annotate
 gem 'annotate'
 
