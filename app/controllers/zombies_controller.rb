@@ -1,5 +1,6 @@
 class ZombiesController < ApplicationController
-  before_action :authenticate_model! , only: [:new]
+  
+   before_action :authenticate_user! , only: [:new]
 
   def index
     @zombies = Zombie.all
@@ -14,8 +15,7 @@ class ZombiesController < ApplicationController
       if @zombie.save
         redirect_to zombies_path, notice:"El zombie fué creado con éxito"
       else
-        render :new,
-        notice: "El zombie no fué creado con éxito"
+        render :new, notice: "El zombie no fué creado con éxito"
     end
   end
 
