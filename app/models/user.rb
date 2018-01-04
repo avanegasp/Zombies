@@ -23,6 +23,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :tweets
+  belongs_to :zombie
+
   validates :email, uniqueness: true
 end
