@@ -1,9 +1,11 @@
 class ZombiesController < ApplicationController
-  
    before_action :authenticate_user! , only: [:new]
 
   def index
     @zombies = Zombie.all
+    if params[:query].present?
+      @zombies = @zombies.where("title LIKE :query", query: "%#{params[:query]}%")
+    end
   end
 
   def new

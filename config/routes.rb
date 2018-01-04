@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :zombies
+
+  resources :zombies do
+    resources :tweets
+  end
 end
